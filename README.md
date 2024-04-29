@@ -7,7 +7,7 @@
 
 ## Descrição
 Esse projeto foi criada como desafio de um lab durante um bootcamp da **[DIO](https://web.dio.me)** com parceria do Santander, [Santander 2024 - Backend com Java](https://web.dio.me/track/santander-2024-backend-com-java).
-O desafio consiste na criação de um código em Java, a descrição do desafio está abaixo como proposto a mim.
+O desafio consiste na criação de um código em Java, para simular a criação de uma conta bancária pelo terminal.
 
 ## Sintaxe - Desafio
 
