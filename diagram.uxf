@@ -1,0 +1,60 @@
+@startuml
+
+class iPhone {
+  - nomeUsuario: String
+  - modelo: String
+  - capacidadeArmazenamento: int
+  + reprodutorMusical: ReprodutorMusical
+  + aparelhoTelefonico: AparelhoTelefonico
+  + navegadorInternet: NavegadorInternet
+}
+
+class ReprodutorMusical {
+  - listaMusicas: List[Musica]
+  - musicaAtual: Musica
+  - equalizador: Equalizador
+  - volume: int
+  - modoReprodução: String
+  + tocarMusica(musica: Musica)
+  + pausarMusica()
+  + selecionarMusica(indice: int)
+  + ajustarEqualizador(configuracao: ConfiguracaoEqualizador)
+  + definirVolume(novoVolume: int)
+  + setModoReprodução(novoModo: String)
+}
+
+class AparelhoTelefonico {
+  - listaContatos: List[Contato]
+  - chamadaAtual: ChamadaTelefonica
+  - historicoChamadas: List[ChamadaTelefonica]
+  - gravadorVoz: GravadorVoz
+  - vivaVozAtivado: bool
+  + ligarPara(contato: Contato)
+  + atenderChamada()
+  + iniciarCorreioVoz()
+  + visualizarHistoricoChamadas()
+  + gravarMensagemVoz(mensagem: String)
+  + ativarVivaVoz()
+  + desativarVivaVoz()
+}
+
+class NavegadorInternet {
+  - abasAbertas: List[PaginaWeb]
+  - paginaAtual: PaginaWeb
+  - historicoPáginas: List[PaginaWeb]
+  - favoritos: List[URL]
+  - modoLeituraAtivado: bool
+  + exibirPagina(url: URL)
+  + adicionarNovaAba(url: URL)
+  + atualizarPagina()
+  + visualizarHistoricoPaginas()
+  + adicionarFavorito(url: URL)
+  + removerFavorito(url: URL)
+  + ativarModoLeitura()
+  + desativarModoLeitura()
+}
+
+iPhone o-- ReprodutorMusical: reproduzir música
+iPhone o-- AparelhoTelefonico: realizar chamadas
+iPhone o-- NavegadorInternet: navegar na web
+@enduml
